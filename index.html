@@ -869,7 +869,7 @@
 </div>
 
 <script>
-  const APPS_SCRIPT_URL = "https://script.google.com/macros/library/d/14_lNBkFyWfHM0006lrwj09iCop9LEPghX4E_Uaw2ApJl0FkvTylgcVJP/2";
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx5MSDinRTBjs27BePww9NkK-mWVJCPUbOlpsZ5QTLwl-zFSFW1EvwLxyvNbKGkR4ea/exec";
 
   const teams48 = [
     "África do Sul","Alemanha","Argélia","Argentina","Arábia Saudita","Áustria",
@@ -980,13 +980,14 @@
     btn.classList.add('loading');
 
     try {
-      await fetch(APPS_SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-    } catch(e) {}
+await fetch(APPS_SCRIPT_URL, {
+method: 'POST',
+mode: 'no-cors',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify(payload)
+});
 
     document.getElementById('formContent').style.display = 'none';
     const box = document.getElementById('successBox');
